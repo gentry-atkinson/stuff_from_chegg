@@ -1,0 +1,56 @@
+Write the definition for a function called min_and_max which is void. Your function should take an array of integers, the size of the array, an integer named max, 
+and an integer named min. Your function should set the value of the parameter called biggest to the maximum value in the array and the parameter 
+called smallest to the minimum. 
+You should do this in such a way that the changes to biggest and smallest will be visible outside the function min_and_max.
+
+#include <iostream>
+
+using namespace std;
+
+//function to find the maximum and minimum from an array
+void max_and_min(int arr[], int size, int &max, int &min)
+{
+//variable initialization
+max = arr[0];
+min = arr[0];
+
+//find the minimum and maximum number
+for(int i=0; i<size; i++)
+{
+if(min>arr[i])
+min = arr[i];
+if(max<arr[i])
+max = arr[i];
+}
+}
+
+int main()
+{
+//array declaration and initialization
+int arr[] = {3, 2, 1, 5, 4, 7, 8, 9};
+int min, max;
+
+//function calling
+max_and_min(arr, 8, max, min);
+
+//display the result
+cout<<"Max = "<<max;
+cout<<endl<<"Min = "<<min;
+
+return 0;
+}
+
+void min_max(int *arr,int sizeArr,int *min,int *max){
+*min = arr[0];
+*max = arr[0];
+for(int i=0;i<sizeArr;i++){
+//checking each number in the array for minimum
+if(arr[i] < * min){
+*min = arr[i];
+}
+//checking each number in the array for maximum
+if(arr[i] > *max){
+*max = arr[i];
+}
+}
+}

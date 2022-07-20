@@ -1,0 +1,29 @@
+Write a definition for a function called nameTooShort that returns a boolean value. Your function should take on string as a parameter. 
+Return true if the string has less than 4 characters in it. Return false otherwise. 
+You can choose to make the parameter a C++ string or a C-string. 
+
+#include <iostream>
+
+using namespace std;
+
+//function to check if string length is greater than 12 or not
+bool nameTooLong(string str)
+{
+if(str.length()>12)
+{
+return true;
+}
+
+//return statement
+return false;
+}
+
+int main()
+{
+//function calling and display result
+cout<<nameTooLong("123456789123456");
+cout<<endl<<nameTooLong("123");
+
+return 0;
+}
+

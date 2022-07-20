@@ -28,3 +28,30 @@ int main(){
                  
    return 0;
 }
+
+// Nested For Loops to print the pattern
+// Outer for loop with i values from 1 to 5
+// as the each line of pattern starts with 1,2,3,4,5
+
+for (int i = 1; i <= 5; i++)
+
+{
+
+// Inner for loop with j = i
+
+// decrementing the j as the values
+
+// in each row are in descending order
+for(int j = i; j = 1 ; j--)
+
+{
+
+// printing the value of j
+cout << j << "";
+
+}
+
+//printing new line
+cout << "\n";
+
+}

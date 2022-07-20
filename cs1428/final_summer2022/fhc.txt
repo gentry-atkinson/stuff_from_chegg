@@ -1,0 +1,161 @@
+
+
+Create a struct called Factory which has the following data members:
+
+    string location
+    float build_times[10]
+    float shortest_time
+
+Add a constructor to Factory which takes no parameters. The constructor should prompt the user to 
+enter 10 build times for different products being made on an assembly line. 
+The constructor should assign the minimum of all of the times to the member shortest_time.
+
+
+
+#include<iostream>
+#include <ctime>
+using namespace std;
+
+struct Experiment {
+	/*struct variables*/
+    string date;
+    string labRoom;
+    float samples[10];
+    float average;
+    
+    /*constructor*/
+    Experiment(){
+    	/*additional part*/
+    	/*finding a current time*/
+   		time_t cur = time(0);
+   		date = ctime(&cur);
+   		/*below are some additional code*/
+    	cout<<"Enter a lab Room: ";
+    	getline(cin,labRoom);
+    	/*asking a 10 value from user*/
+    	int i=0;
+    	float sum=0;
+    	/*a for loop that ask for user input*/
+    	for(i=0;i<10;i++){
+    		cout<<"Enter Experiment value "<<(i+1)<<" : ";
+    		cin>>samples[i]; /*reading a sample value into float array*/
+    		sum=sum+samples[i]; /*finding a sum*/
+		}
+		average=(float)sum/10; /*assigning an average to */
+	}
+};
+int main(){
+	Experiment ex1; /*creating a variable of structure*/
+	cout<<"\n--------Printing a detail about structure object---------";
+	cout<<endl<<"Experiment Date:"<<ex1.date;
+	cout<<"Experiment Labroom: "<<ex1.labRoom;
+	cout<<endl<<"Experiment avearge: "<<ex1.average;	
+}
+
+#include <iostream>
+
+using namespace std;
+
+struct Factory{//start structure named Factory
+
+//add the data members in structure
+
+string location;
+
+float build_times[10];
+
+float total_time;
+
+//add the construtcor to read build_times
+
+Factory(){
+
+total_time=0;
+
+cout<<"\nEnter 10 build times: ";
+
+for(int i =0; i<10; i++){//repeat the loop 10 times from index 0 to 9
+
+cin>>build_times[i];//read the build_times for current index
+
+total_time=total_time+build_times[i];//add the build_time to total_time
+
+}//end for
+
+}
+
+};//end structure
+
+int main()
+
+{
+
+struct Factory f1;//calls the construtor automatically
+
+cout<<"Total time used is: "<<f1.total_time ;//print the total_time calaculated in construtor
+
+return 0;
+
+}
+
+#include <iostream>
+using namespace std;
+
+struct Garage{
+//data members
+string address;
+float fuel_efficiency[10];
+float lowest_efficiency;
+//constructor
+Garage(){
+for(int i=0;i<10;i++){
+cout<<"Enter mileage for car "<<i+1<<": ";
+cin>>this->fuel_efficiency[i];
+}
+float lowest=fuel_efficiency[0];
+for(int i=1;i<10;i++){
+if(lowest>fuel_efficiency[i]){lowest=fuel_efficiency[i];}
+}
+this->lowest_efficiency=lowest;
+}
+};
+
+//main function
+int main()
+{
+Garage g1;
+cout<<"\nLowest Efficiency: "<<g1.lowest_efficiency<<endl;
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+struct Runner
+{
+	string name;
+	float distances[10];
+	float longestRun;
+	Runner()
+	{
+		cout<<"Enter 10 values: ";
+		for(int i=0;i<10;i++)
+		{
+			cin>>distances[i];
+		}
+		longestRun=distances[0];
+		for(int i=1;i<10;i++)
+		{
+			if(distances[i]>longestRun)
+			{
+				longestRun=distances[i];
+			}
+		}
+		cout<<"Longest run distance = "<<longestRun;
+	}
+};
+
+int main()
+{
+	Runner r;
+	return 0;
+}
