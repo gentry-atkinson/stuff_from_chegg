@@ -1,0 +1,28 @@
+Write a do...while loop that repeatedly asks the user to enter a 
+floating point number and then prints that number multiplied by 5. 
+Your loop should run until the user enters 0 as their input. You only 
+need to write the loop, not a full program.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declaring a floating point number
+    float x;
+    
+    // Prompt message for the user to input number
+    cout << "Type a floating point number: ";
+    
+    // Get user input from the keyboard
+    cin >> x; 
+    
+    // while loop execution
+    while( x >= 1 ) {
+        // Printing the value of x
+        cout << "value of x: " << x << endl;
+        // Dividing x by 2 each time the loop runs
+        x = x/2;
+    }
+   
+    return 0;
+}
