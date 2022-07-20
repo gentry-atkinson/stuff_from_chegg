@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int number;
+    cout << "Please enter a integer: ";
+    cin >> number;
+    for(; number >= 0; number--){
+        cout << number << " ";
+        if(number%3 == 0) cout << "THIRD" << endl;
+        else cout << number/3.0 << endl;
+    }
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Please enter an integer: ";
+    cin >> n;
+
+    for (int i = n; i >= 0; --i) {
+        cout << i << " ";
+        if (i % 2 == 0) {
+            cout << i % 3 << endl;
+        } else {
+            cout << i % 5 << endl;
+        }
+    }
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int n;
+//take the input
+cout<<"Please enter an integer: ";
+cin>>n;
+for(int i=n;i>=0;i--)
+{
+cout<<i<<" ";
+//check if the number is greater than equal to 5
+if(i>=5)
+{
+cout<<i%3<<endl;
+}
+else if(i==1)
+{
+cout<<"0"<<endl;
+}
+else{
+cout<<i%2<<endl;
+}
+}
+}

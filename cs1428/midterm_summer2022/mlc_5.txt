@@ -1,0 +1,29 @@
+
+
+Write a short code snippet (not a full program) which will prompt the user to enter a floating point number. 
+Use a  while loop which will repeatedly print the number, dividing it by 3 each time. Your loop should run until the 
+number is less than 4. Your code should only take input from the user once, and should never print a number less than 4. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declaring a floating point number
+    float x;
+    
+    // Prompt message for the user to input number
+    cout << "Type a floating point number: ";
+    
+    // Get user input from the keyboard
+    cin >> x; 
+    
+    // while loop execution
+    while( x >= 1 ) {
+        // Printing the value of x
+        cout << "value of x: " << x << endl;
+        // Dividing x by 2 each time the loop runs
+        x = x/2;
+    }
+   
+    return 0;
+}

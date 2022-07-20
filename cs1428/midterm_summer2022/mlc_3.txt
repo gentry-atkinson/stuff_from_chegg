@@ -1,0 +1,47 @@
+Fill in a switch statement in the code snippet below. Only the branching statement, not a whole program. You can assume that user_letter already has a value stored in it.
+
+Print "First 5" if the variable user_letter is a, b, c, d, or e.
+
+Print "Other" for any other letter of the alphabet.
+
+ 
+
+char user_letter;
+
+cout << "Enter a lowercase letter: ";
+
+cin >> user_letter;
+
+//fill in your branch here
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	char user_letter; 
+	cout << "Enter a lowercase letter:";
+	cin >> user_letter; // received from the keyboard
+	
+	// fill in your branching here
+	switch (user_letter) {
+        case 'a': // check for the letter a
+            cout << "Vowel";
+            break; // if matched ,no need to go further below ,break the switch statement
+        case 'e': // letter e
+            cout << "Vowel";
+            break;
+        case 'i': // letter i
+            cout << "Vowel";
+            break;
+        case 'o': // letter 0
+            cout << "Vowel";
+            break;
+        case 'u':// letter u
+            cout << "Vowel";
+            break;
+        default : // if all the above conditions do not matched then it is a consonant
+            cout << "Consonant";
+    
+   }
+}
