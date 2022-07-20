@@ -1,0 +1,63 @@
+
+Fill in an if...else if...else statement in the code snippet below. Only the branching 
+statement, not a whole program. You can assume that user_input already has a value stored in it.
+
+Print "Good" when the variable user_input is divisible by 3.
+
+Print "Better" when the variable user_input is divisible by 3 and greater than 7.
+
+Print "Best" if the variable user_input is divisible by 3, greater than 7, and not divisible by 4.
+
+Print "Bad" for all other values of user_input.
+
+ 
+
+int user_input;
+
+cout << "Please enter a number: ";
+
+cin >> user_input;
+
+//fill in your branch here
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int user_input;
+
+    std::cout <<"please enter a number: ";
+
+    cin>>user_input;
+   
+
+    // if user_input is odd and greater than 7 and not divisible by 3
+
+    if(user_input%2==1 && user_input>7 && user_input%3!=0){
+
+        cout<<"Best"<<'\n';
+
+    }
+
+    else  if(user_input%2==1 && user_input>7){
+
+        cout<<"Better"<<'\n';
+
+    }
+
+   else if(user_input%2==1) {
+
+        cout<<"GOOD"<<'\n';
+
+    }
+
+   else cout<<"Bad"<<'\n';
+
+
+    return 0;
+
+}

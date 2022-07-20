@@ -1,0 +1,61 @@
+Write a definition for a function called is_prime which will return a boolean value. Your function should take one integer as a parameter. 
+Your function should return true if the parameter is prime and false if it is not.
+
+#include <iostream>
+using namespace std;
+
+bool is_prime(int n)
+{
+int result=true;
+for(int i=2;i<=n/2;i++)
+{
+if((n%i)==0)
+result=false;
+}
+return result;
+}
+
+int main()
+{
+int number;
+cout<<"Enter a number : ";
+cin>>number;
+bool result=is_prime(number);
+if(result==true)
+cout<<"True";
+else
+cout<<"False";
+return 0;
+
+}
+
+#include <iostream>
+using namespace std;
+//defining isPrime function
+bool isPrime(int num){
+//looping from 2 to number
+for(int i=2;i<num;i++)
+//checking if the number is divisible
+if(num%i==0)
+//returning FALSE
+return false;
+//returning TRUE
+return true;
+}
+int main()
+{
+//initializing number
+int num;
+//asking for number
+cout<<"Enter number: ";
+//accepting it
+cin>>num;
+//checking if the number is prime
+if(isPrime(num))
+//printing prime
+cout<<"The value "<<num<<" is prime."<<endl;
+else
+//printing not prime
+cout<<"The value "<<num<<" is not prime."<<endl;
+return 0;
+}
